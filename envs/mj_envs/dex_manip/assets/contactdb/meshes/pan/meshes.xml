@@ -1,0 +1,23 @@
+<mujocoinclude>
+	<mesh file="contactdb/vhacd/pan/0.stl" name="0" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/1.stl" name="1" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/2.stl" name="2" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/3.stl" name="3" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/4.stl" name="4" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/5.stl" name="5" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/6.stl" name="6" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/7.stl" name="7" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/8.stl" name="8" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/9.stl" name="9" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/10.stl" name="10" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/11.stl" name="11" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/12.stl" name="12" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/13.stl" name="13" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/14.stl" name="14" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/15.stl" name="15" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/16.stl" name="16" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/17.stl" name="17" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/18.stl" name="18" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/19.stl" name="19" scale="1.80 1.80 1.80"/>
+	<mesh file="contactdb/vhacd/pan/20.stl" name="20" scale="1.80 1.80 1.80"/>
+</mujocoinclude>

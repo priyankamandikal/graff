@@ -1,0 +1,14 @@
+<mujocoinclude>
+	<mesh file="contactdb/vhacd/cup/0.stl" name="0" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/1.stl" name="1" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/2.stl" name="2" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/3.stl" name="3" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/4.stl" name="4" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/5.stl" name="5" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/6.stl" name="6" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/7.stl" name="7" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/8.stl" name="8" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/9.stl" name="9" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/10.stl" name="10" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/cup/11.stl" name="11" scale="1.40 1.40 1.40"/>
+</mujocoinclude>

@@ -1,0 +1,18 @@
+<mujocoinclude>
+	<mesh file="contactdb/vhacd/mug/0.stl" name="0" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/1.stl" name="1" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/2.stl" name="2" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/3.stl" name="3" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/4.stl" name="4" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/5.stl" name="5" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/6.stl" name="6" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/7.stl" name="7" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/8.stl" name="8" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/9.stl" name="9" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/10.stl" name="10" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/11.stl" name="11" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/12.stl" name="12" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/13.stl" name="13" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/14.stl" name="14" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/mug/15.stl" name="15" scale="1.60 1.60 1.60"/>
+</mujocoinclude>

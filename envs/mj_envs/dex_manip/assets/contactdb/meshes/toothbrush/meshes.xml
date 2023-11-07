@@ -1,0 +1,5 @@
+<mujocoinclude>
+	<mesh file="contactdb/vhacd/toothbrush/0.stl" name="0" scale="1.50 1.50 1.50"/>
+	<mesh file="contactdb/vhacd/toothbrush/1.stl" name="1" scale="1.50 1.50 1.50"/>
+	<mesh file="contactdb/vhacd/toothbrush/2.stl" name="2" scale="1.50 1.50 1.50"/>
+</mujocoinclude>

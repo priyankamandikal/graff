@@ -1,0 +1,13 @@
+<mujocoinclude>
+	<mesh file="contactdb/vhacd/flashlight/0.stl" name="0" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/1.stl" name="1" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/2.stl" name="2" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/3.stl" name="3" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/4.stl" name="4" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/5.stl" name="5" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/6.stl" name="6" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/7.stl" name="7" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/8.stl" name="8" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/9.stl" name="9" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/flashlight/10.stl" name="10" scale="1.60 1.60 1.60"/>
+</mujocoinclude>

@@ -1,0 +1,17 @@
+<mujocoinclude>
+	<geom type="mesh" mesh="0" name="Obj_mesh_0" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="1" name="Obj_mesh_1" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="2" name="Obj_mesh_2" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="3" name="Obj_mesh_3" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="4" name="Obj_mesh_4" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="5" name="Obj_mesh_5" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="6" name="Obj_mesh_6" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="7" name="Obj_mesh_7" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="8" name="Obj_mesh_8" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="9" name="Obj_mesh_9" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="10" name="Obj_mesh_10" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="11" name="Obj_mesh_11" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="12" name="Obj_mesh_12" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="13" name="Obj_mesh_13" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+	<geom type="mesh" mesh="14" name="Obj_mesh_14" euler="0 0 -1.57" condim="4" solref="0.01 1.1" solimp="1 1 0"/>
+</mujocoinclude>

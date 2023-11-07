@@ -1,0 +1,17 @@
+<mujocoinclude>
+	<mesh file="contactdb/vhacd/scissors/0.stl" name="0" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/1.stl" name="1" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/2.stl" name="2" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/3.stl" name="3" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/4.stl" name="4" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/5.stl" name="5" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/6.stl" name="6" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/7.stl" name="7" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/8.stl" name="8" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/9.stl" name="9" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/10.stl" name="10" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/11.stl" name="11" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/12.stl" name="12" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/13.stl" name="13" scale="1.60 1.60 1.60"/>
+	<mesh file="contactdb/vhacd/scissors/14.stl" name="14" scale="1.60 1.60 1.60"/>
+</mujocoinclude>
