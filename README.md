@@ -15,6 +15,14 @@ If you find this work useful in your research, please consider citing:
 }
 ```
 
+## Demo
+
+To visualize the provided trained model, set up the environment correctly (see [below](https://github.com/priyankamandikal/graff#installation)) and run:
+```shell
+bash scripts/demo.sh
+```
+This will save videos of robot trajectories in `expts/graff_trained/videos_stability`. You can change the object as needed.
+
 ## Overview
 GRAFF is a deep RL dexterous robotic grasping policy that uses visual affordance priors learnt from humans for functional grasping. Our proposed model, called GRAFF for Grasp-Affordances, consists of two stages. First, we train a network to predict affordance regions from static images. Second, we train a dynamic grasping policy using the learned affordances. The key upshots of our approach are better grasping, faster learning, and generalization to successfully grasp objects unseen during policy training. 
 
@@ -150,14 +158,6 @@ Follow the steps detailed above to set up the environment and download the pre-t
 bash scripts/eval.sh
 ```
 The results (metrics and videos) will be saved inside *expts/*
-
-## Demo
-
-To visualize the provided trained model, set up the environment correctly and run:
-```shell
-bash scripts/demo.sh
-```
-This will save videos of robot trajectories in `expts/graff_trained/videos_stability`. You can change the object as needed.
 
 ## Sample Results
 #### Visual Affordance
