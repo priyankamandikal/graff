@@ -167,3 +167,6 @@ Below are a few sample results from our visual affordance model
 #### Dexterous Grasping
 Below are a few sample results from our dexterous grasping policy.
 <img src="images/results_graff.gif" alt="Grasping Results" width="500"/>
+
+## Acknowledgements
+The PPO algorithm has been adapted from https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
