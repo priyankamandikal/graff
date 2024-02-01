@@ -78,6 +78,7 @@ def make_vec_envs(env_name,
         ]
 
     if len(envs) > 1:
+        #################################################################try#############################################
         envs = ShmemVecEnv(envs, context='spawn')
         # envs = SubprocVecEnv(envs, context='spawn')
     else:

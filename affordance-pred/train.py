@@ -10,6 +10,9 @@ Run as:
 
 import os
 import os.path as osp
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 import numpy as np
@@ -17,6 +20,8 @@ import cv2
 import torch
 import matplotlib.pyplot as plt
 import segmentation_models_pytorch as smp
+from segmentation_models_pytorch import utils
+from segmentation_models_pytorch.utils import train
 from sklearn.model_selection import train_test_split
 
 # Set random seeds
@@ -30,8 +35,11 @@ curr_dir = osp.dirname(osp.abspath(__file__))
 data_dir = osp.join(curr_dir, 'data/contactdb')
 save_dir = osp.join(curr_dir, 'save')
 os.makedirs(save_dir, exist_ok=True)
-objs = ["apple", "banana", "cup", "cell_phone", "door_knob", "flashlight", "hammer", "knife", "light_bulb", "mug",
+# objs = ["apple", "banana", "cup", "cell_phone", "door_knob", "flashlight", "hammer", "knife", "light_bulb", "mug",
+#         "pan", "scissors", "stapler", "teapot", "toothbrush", "toothpaste"]
+objs = ["apple", "cup", "cell_phone", "door_knob", "flashlight", "hammer", "knife", "light_bulb", "mug", "mouse",
         "pan", "scissors", "stapler", "teapot", "toothbrush", "toothpaste"]
+
 
 # generate train, val, test splits
 x_all_fpaths = []
@@ -156,8 +164,10 @@ def get_training_augmentation():
         albu.PadIfNeeded(min_height=128, min_width=128, always_apply=True, border_mode=0),
         albu.RandomCrop(height=128, width=128, always_apply=True),
 
-        albu.IAAAdditiveGaussianNoise(p=0.2),
-        albu.IAAPerspective(p=0.5),
+        # albu.IAAAdditiveGaussianNoise(p=0.2),
+        albu.GaussNoise(p=0.2),
+        # albu.IAAPerspective(p=0.5),
+        albu.Perspective(p=0.5),
 
         albu.OneOf(
             [
@@ -170,7 +180,8 @@ def get_training_augmentation():
 
         albu.OneOf(
             [
-                albu.IAASharpen(p=1),
+                # albu.IAASharpen(p=1),
+                albu.Sharpen(p=1),
                 albu.Blur(blur_limit=3, p=1),
                 albu.MotionBlur(blur_limit=3, p=1),
             ],
@@ -179,7 +190,7 @@ def get_training_augmentation():
 
         albu.OneOf(
             [
-                albu.RandomContrast(p=1),
+                albu.RandomBrightnessContrast(p=1),
                 albu.HueSaturationValue(p=1),
             ],
             p=0.9,
@@ -272,7 +283,7 @@ valid_loader = DataLoader(valid_dataset, batch_size=1, shuffle=False, num_worker
 
 loss = smp.utils.losses.DiceLoss()
 metrics = [
-    smp.utils.metrics.IoU(threshold=0.5),
+    utils.metrics.IoU(threshold=0.2),
 ]
 
 optimizer = torch.optim.Adam([
@@ -281,7 +292,7 @@ optimizer = torch.optim.Adam([
 
 # create epoch runners
 # it is a simple loop of iterating over dataloader`s samples
-train_epoch = smp.utils.train.TrainEpoch(
+train_epoch = train.TrainEpoch(
     model,
     loss=loss,
     metrics=metrics,
@@ -290,7 +301,7 @@ train_epoch = smp.utils.train.TrainEpoch(
     verbose=True,
 )
 
-valid_epoch = smp.utils.train.ValidEpoch(
+valid_epoch = utils.train.ValidEpoch(
     model,
     loss=loss,
     metrics=metrics,
@@ -304,6 +315,7 @@ max_score = 0
 
 for i in range(0, 20):
     print('\nEpoch: {}'.format(i))
+    print("...................................................................................")
     train_logs = train_epoch.run(train_loader)
     valid_logs = valid_epoch.run(valid_loader)
 

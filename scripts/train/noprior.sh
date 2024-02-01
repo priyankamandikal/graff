@@ -1,7 +1,7 @@
 #!/bin/bash
 
 expdir=./expts      # path to folder with model checkpoints
-gpu_model=0         # gpu to use for model
+gpu_model=1         # gpu to use for model
 gpu_env=1           # gpu to use for env
 seed=1              # seed to use
 

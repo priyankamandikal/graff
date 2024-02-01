@@ -31,8 +31,8 @@ class GraspV0(mujoco_env.MujocoEnv, utils.EzPickle):
         self.table_bid = 0
         self.device_id = device_id
         self.curr_dir = dirname(abspath(__file__))
-        env_dir = join(self.curr_dir, '../envs/mj_envs/hand_manipulation_suite')
-        model_path = join(env_dir, 'assets/grasp/contactdb/%s_vhacd.xml' % self.obj_name)
+        env_dir = join(self.curr_dir, '../envs/mj_envs/dex_manip')
+        model_path = join(env_dir, 'assets/contactdb/env_xmls/%s_vhacd.xml' % self.obj_name)
         frame_skip = 5
         self.seed()
 
@@ -70,7 +70,7 @@ class GraspV0(mujoco_env.MujocoEnv, utils.EzPickle):
             os.makedirs('images/%s'%str(self.device_id), exist_ok=True)
 
         # contact
-        self.contact_json = join(env_dir, 'assets/contacts/%s.json'%self.obj_name)
+        self.contact_json = join(env_dir, 'assets/contactdb/contacts/%s.json'%self.obj_name)
 
         # max contact
         with open(self.contact_json, 'r') as f:
@@ -300,6 +300,7 @@ if __name__=='__main__':
                             'gravity': -9.81,
                             'debug': args.debug
                             }
+        print(obj)
         graspv0 = GraspV0(grasp_attrs_dict=grasp_attrs_dict)
         graspv0.generate_data()
         print("%s completed!"%obj)

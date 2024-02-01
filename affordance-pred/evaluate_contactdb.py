@@ -17,6 +17,7 @@ import cv2
 import torch
 import matplotlib.pyplot as plt
 import segmentation_models_pytorch as smp
+from segmentation_models_pytorch import utils
 from sklearn.model_selection import train_test_split
 
 # Set random seeds

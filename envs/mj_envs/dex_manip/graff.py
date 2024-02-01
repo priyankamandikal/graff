@@ -92,7 +92,9 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         print('Observation Space: ', self.observation_space)
 
         # set ofscreen render contexts
-        self.mjr_render_context_offscreen = MjRenderContext(self.sim, offscreen=True, device_id=self.device_id, opengl_backend='egl')
+        self.mjr_render_context_offscreen = MjRenderContext(self.sim, offscreen=True,
+                                                            # device_id=self.device_id,
+                                                            opengl_backend='egl')
         self.sim._render_context_offscreen.vopt.flags[0] = 0
         self.sim._render_context_offscreen.vopt.flags[11] = self.sim._render_context_offscreen.vopt.flags[12] = 1
 
@@ -258,9 +260,13 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
 
 
     def _get_cnn_obs(self, cam):
+        # print('cam: ', cam)
+        # print('device_id: ', self.device_id)
         rgbd_frame = self.sim.render(width=self.frame_size[0], height=self.frame_size[1],
                                      mode='offscreen', camera_name=cam,
-                                     depth=True, device_id=self.device_id)
+                                     depth=True,
+                                    #  device_id=self.device_id
+                                     )
         cnn_inp = {}
         # rgb image
         if 'rgb' in self.grasp_attrs_dict['inputs']:
