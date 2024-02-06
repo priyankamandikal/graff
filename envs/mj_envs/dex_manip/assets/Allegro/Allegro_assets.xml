@@ -222,41 +222,41 @@
   </tendon>
 
   <actuator>
-    <general name="ffa0" joint="ffj0" class="base"  />
-    <general name="ffa1" joint="ffj1" class="proximal"/>
-    <general name="ffa2" joint="ffj2" class="medial"/>
-    <general name="ffa3" joint="ffj3" class="distal"/>
-    <general name="mfa0" joint="mfj0" class="base"/>
-    <general name="mfa1" joint="mfj1" class="proximal"/>
-    <general name="mfa2" joint="mfj2" class="medial"/>
-    <general name="mfa3" joint="mfj3" class="distal"/>
-    <general name="rfa0" joint="rfj0" class="base"/>
-    <general name="rfa1" joint="rfj1" class="proximal"/>
-    <general name="rfa2" joint="rfj2" class="medial"/>
-    <general name="rfa3" joint="rfj3" class="distal"/>
-    <general name="tha0" joint="thj0" class="thumb_base"/>
-    <general name="tha1" joint="thj1" class="thumb_proximal"/>
-    <general name="tha2" joint="thj2" class="thumb_medial"/>
-    <general name="tha3" joint="thj3" class="thumb_distal"/>
+    <general name="A_ffa0" joint="ffj0" class="base"  />
+    <general name="A_ffa1" joint="ffj1" class="proximal"/>
+    <general name="A_ffa2" joint="ffj2" class="medial"/>
+    <general name="A_ffa3" joint="ffj3" class="distal"/>
+    <general name="A_mfa0" joint="mfj0" class="base"/>
+    <general name="A_mfa1" joint="mfj1" class="proximal"/>
+    <general name="A_mfa2" joint="mfj2" class="medial"/>
+    <general name="A_mfa3" joint="mfj3" class="distal"/>
+    <general name="A_rfa0" joint="rfj0" class="base"/>
+    <general name="A_rfa1" joint="rfj1" class="proximal"/>
+    <general name="A_rfa2" joint="rfj2" class="medial"/>
+    <general name="A_rfa3" joint="rfj3" class="distal"/>
+    <general name="A_tha0" joint="thj0" class="thumb_base"/>
+    <general name="A_tha1" joint="thj1" class="thumb_proximal"/>
+    <general name="A_tha2" joint="thj2" class="thumb_medial"/>
+    <general name="A_tha3" joint="thj3" class="thumb_distal"/>
   </actuator>
 
   <sensor>
-    <actuatorfrc actuator="ffa0" name="Saf_ffa0"/>
-    <actuatorfrc actuator="ffa1" name="Saf_ffa1"/>
-    <actuatorfrc actuator="ffa2" name="Saf_ffa2"/>
-    <actuatorfrc actuator="ffa3" name="Saf_ffa3"/>
-    <actuatorfrc actuator="mfa0" name="Saf_mfa0"/>
-    <actuatorfrc actuator="mfa1" name="Saf_mfa1"/>
-    <actuatorfrc actuator="mfa2" name="Saf_mfa2"/>
-    <actuatorfrc actuator="mfa3" name="Saf_mfa3"/>
-    <actuatorfrc actuator="rfa0" name="Saf_rfa0"/>
-    <actuatorfrc actuator="rfa1" name="Saf_rfa1"/>
-    <actuatorfrc actuator="rfa2" name="Saf_rfa2"/>
-    <actuatorfrc actuator="rfa3" name="Saf_rfa3"/>
-    <actuatorfrc actuator="tha0" name="Saf_tha0"/>
-    <actuatorfrc actuator="tha1" name="Saf_tha1"/>
-    <actuatorfrc actuator="tha2" name="Saf_tha2"/>
-    <actuatorfrc actuator="tha3" name="Saf_tha3"/>
+    <actuatorfrc actuator="A_ffa0" name="Saf_ffa0"/>
+    <actuatorfrc actuator="A_ffa1" name="Saf_ffa1"/>
+    <actuatorfrc actuator="A_ffa2" name="Saf_ffa2"/>
+    <actuatorfrc actuator="A_ffa3" name="Saf_ffa3"/>
+    <actuatorfrc actuator="A_mfa0" name="Saf_mfa0"/>
+    <actuatorfrc actuator="A_mfa1" name="Saf_mfa1"/>
+    <actuatorfrc actuator="A_mfa2" name="Saf_mfa2"/>
+    <actuatorfrc actuator="A_mfa3" name="Saf_mfa3"/>
+    <actuatorfrc actuator="A_rfa0" name="Saf_rfa0"/>
+    <actuatorfrc actuator="A_rfa1" name="Saf_rfa1"/>
+    <actuatorfrc actuator="A_rfa2" name="Saf_rfa2"/>
+    <actuatorfrc actuator="A_rfa3" name="Saf_rfa3"/>
+    <actuatorfrc actuator="A_tha0" name="Saf_tha0"/>
+    <actuatorfrc actuator="A_tha1" name="Saf_tha1"/>
+    <actuatorfrc actuator="A_tha2" name="Saf_tha2"/>
+    <actuatorfrc actuator="A_tha3" name="Saf_tha3"/>
 
     <touch name="St_ffa3" site="Tch_ff_distal"/>
     <touch name="St_mfa3" site="Tch_mf_distal"/>
