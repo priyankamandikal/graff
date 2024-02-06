@@ -74,6 +74,7 @@
     </actuator>
 
     <include file='../../adroit/Adroit_assets.xml'/>
+    <!-- <include file='../../Allegro/Allegro_assets.xml'/> -->
 
 
 </mujoco>

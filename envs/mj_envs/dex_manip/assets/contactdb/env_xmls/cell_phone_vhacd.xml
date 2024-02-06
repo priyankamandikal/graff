@@ -59,7 +59,7 @@
             <joint name="obj_Rx3" pos="0 0 0" axis="1 0 0" limited="false" damping="0.1" />
             <joint name="obj_Ry3" pos="0 0 0" axis="0 1 0" limited="false" damping="0.1" />
             <joint name="obj_Rz3" pos="0 0 0" axis="0 0 1" limited="false" damping="0.1" />
-            <include file="../../contactdb/meshes/cell_phone/geoms.xml"/>
+            <include file="../../contactdb/meshes/apple/geoms.xml"/>
         </body>
 
     </worldbody>
@@ -74,6 +74,7 @@
     </actuator>
 
     <include file='../../adroit/Adroit_assets.xml'/>
+    <!-- <include file='../../Allegro/Allegro_assets.xml'/> -->
 
 
 </mujoco>

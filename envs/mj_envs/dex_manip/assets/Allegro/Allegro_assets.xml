@@ -1,0 +1,301 @@
+<mujocoinclude>
+
+    <compiler angle="radian" meshdir="../../../../../resources/meshes/" texturedir='../../../../../resources/textures/' />
+    <option apirate="200" iterations="20" noslip_iterations="20"/>
+    <size njmax="500" nconmax="100" nstack="600000" nuser_body="9" nuser_jnt="1" nuser_site="1" nuser_tendon="1" nuser_actuator="16" nuser_sensor="1" />
+
+    <visual>
+      <global offwidth="3024" offheight="1680" />
+      <quality shadowsize="4096" offsamples="8" />
+      <map force="0.1" fogend="5" />
+      <scale forcewidth='0.1' contactwidth='0.06' contactheight='0.01' jointwidth='0.17' jointlength='2.50' framewidth='0.1' framelength='1.0'/>
+  </visual>
+
+  <default>
+    <default class="allegro_right">
+      <joint axis="0 1 0" damping=".1"/>
+      <position kp="0.3"/>
+      <geom density="800"/>
+      <tendon limited="true" />
+      <general ctrllimited="true" ctrlrange="-1 1" user="0 1 0.03 0.0939711 0.513477 0.0358776 1.23598 8.40409 0.485031 6.04244 1.02187 0.175297 0.121642 0 0 0" />
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" material="black"/>
+        <default class="palm_visual">
+          <geom mesh="base_link"/>
+        </default>
+        <default class="base_visual">
+          <geom mesh="link_0.0"/>
+        </default>
+        <default class="proximal_visual">
+          <geom mesh="link_1.0"/>
+        </default>
+        <default class="medial_visual">
+          <geom mesh="link_2.0"/>
+        </default>
+        <default class="distal_visual">
+          <geom mesh="link_3.0"/>
+        </default>
+        <default class="fingertip_visual">
+          <geom pos="0 0 0.0267" material="white" mesh="link_3.0_tip"/>
+        </default>
+        <default class="thumbtip_visual">
+          <geom pos="0 0 0.0423" material="white" mesh="link_15.0_tip"/>
+        </default>
+      </default>
+
+      <default class="collision">
+        <geom group="3" type="box" mass="0"/>
+        <default class="palm_collision">
+          <geom size="0.0204 0.0565 0.0475" pos="-0.0093 0 -0.0475"/>
+        </default>
+        <default class="base_collision">
+          <geom size="0.0098 0.01375 0.0082" pos="0 0 0.0082"/>
+          <default class="thumb_base_collision">
+            <geom size="0.0179 0.017 0.02275" pos="-0.0179 0.009 0.0145"/>
+          </default>
+        </default>
+        <default class="proximal_collision">
+          <geom size="0.0098 0.01375 0.027" pos="0 0 0.027"/>
+          <default class="thumb_proximal_collision">
+            <geom size="0.0098 0.01375 0.00885" pos="0 0 0.00885"/>
+          </default>
+        </default>
+        <default class="medial_collision">
+          <geom size="0.0098 0.01375 0.0192" pos="0 0 0.0192"/>
+          <default class="thumb_medial_collision">
+            <geom size="0.0098 0.01375 0.0257" pos="0 0 0.0257"/>
+          </default>
+        </default>
+        <default class="distal_collision">
+          <geom size="0.0098 0.01375 0.008" pos="0 0 0.008"/>
+          <default class="thumb_distal_collision">
+            <geom size="0.0098 0.01375 0.0157" pos="0 0 0.0157"/>
+          </default>
+        </default>
+        <default class="fingertip_collision">
+          <geom type="capsule" size="0.012 0.01" pos="0 0 0.019"/>
+          <default class="thumbtip_collision">
+            <geom type="capsule" size="0.012 0.008" pos="0 0 0.035"/>
+          </default>
+        </default>
+      </default>
+
+      <default class="base">
+        <joint axis="0 0 1" range="-0.47 0.47"/>
+        <position ctrlrange="-0.47 0.47"/>
+      </default>
+      <default class="proximal">
+        <joint range="-0.196 1.61"/>
+        <position ctrlrange="-0.196 1.61"/>
+      </default>
+      <default class="medial">
+        <joint range="-0.174 1.709"/>
+        <position ctrlrange="-0.174 1.709"/>
+      </default>
+      <default class="distal">
+        <joint range="-0.227 1.618"/>
+        <position ctrlrange="-0.227 1.618"/>
+      </default>
+      <default class="thumb_base">
+        <joint axis="-1 0 0" range="0.263 1.396"/>
+        <position ctrlrange="0.263 1.396"/>
+      </default>
+      <default class="thumb_proximal">
+        <joint axis="0 0 1" range="-0.105 1.163"/>
+        <position ctrlrange="-0.105 1.163"/>
+      </default>
+      <default class="thumb_medial">
+        <joint range="-0.189 1.644"/>
+        <position ctrlrange="-0.189 1.644"/>
+      </default>
+      <default class="thumb_distal">
+        <joint range="-0.162 1.719"/>
+        <position ctrlrange="-0.162 1.719"/>
+      </default>
+    </default>
+  </default>
+
+  <asset>
+    <material name="black" rgba="0.2 0.2 0.2 1"/>
+    <material name="white" rgba="0.9 0.9 0.9 1"/>
+
+    <mesh file="allegro/base_link.stl"/>
+    <mesh file="allegro/link_0.0.stl"/>
+    <mesh file="allegro/link_1.0.stl"/>
+    <mesh file="allegro/link_2.0.stl"/>
+    <mesh file="allegro/link_3.0.stl"/>
+    <mesh file="allegro/link_3.0_tip.stl"/>
+    <mesh file="allegro/link_12.0_right.stl"/>
+    <mesh file="allegro/link_13.0.stl"/>
+    <mesh file="allegro/link_14.0.stl"/>
+    <mesh file="allegro/link_15.0.stl"/>
+    <mesh file="allegro/link_15.0_tip.stl"/>
+  </asset>
+
+  
+  <asset>
+ 
+  <texture type="cube" name="texgeom" builtin="flat" mark="cross" rgb1="0.3 0.6 0.5" rgb2="0.3 0.6 0.5" width="127" height="762" />
+    <texture type="2d" name="wood2d" file="wood.png" />
+    <texture type="cube" name="wood" file="wood.png" />
+    <texture type="cube" name="square" file="square.png" />
+    <texture type="cube" name="foil" file="silverRaw.png" />
+    <texture type="cube" name="woodb" file="woodb.png" />
+    <texture type="2d" name="groundplane" builtin="checker" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" width="100" height="100" />
+    <texture type="2d" name="marble2d" file="marble.png" />
+    <texture type="cube" name="marblecube" file="marble.png" />
+    <material name="MatColl" specular="1" shininess="0.3" reflectance="0.5" rgba="0.4 0.5 0.6 1" />
+    <material name="MatViz" specular="0.75" shininess="0.1" reflectance="0.5" rgba="0.9 0.7 0.5 1" />
+    <material name="MatGnd" specular="0.3" shininess="0.3" reflectance="0.3" rgba="0.5 0.55 0.5 1" />
+    <material name="object" texture="texgeom" />
+    <material name="groundplane" texture="groundplane" texrepeat="10 10" />
+    <material name="table2d" texture="marble2d" reflectance="0.3" rgba="0.8 0.8 0.8 1" />
+    <material name="tablecube" texture="marblecube" rgba="0.8 0.8 0.8 1" />
+    <material name="table_ycb" rgba="0.8 0.8 0.8 1" />
+    <material name="MatFoil" texture="foil" specular="1" shininess="0.3" rgba="0.9 0.9 0.9 1" />
+    <material name="MatPlane" specular="0.3" shininess="0.3" rgba="0.3 0.3 0.2 1" />
+    <material name="MatWood" texture="wood" texrepeat="3 3" specular="0.4" shininess="0.1" />
+    <material name="MatSquare" texture="square" specular="1" shininess="0.6" rgba="0.8 0.8 0.8 1" />
+    <material name="MatWoodR" texture="wood" specular="1" shininess="0.3" rgba="1 0.5 0.5 1" />
+    <material name="MatWoodG" texture="wood" specular="1" shininess="0.3" rgba="0.2 1 0.2 1" />
+    <material name="MatWoodB" texture="woodb" specular="1" shininess="0.3" />
+  </asset>
+  <contact>
+    <exclude body1="all_palm" body2="ff_base"/>
+    <exclude body1="all_palm" body2="mf_base"/>
+    <exclude body1="all_palm" body2="rf_base"/>
+    <exclude body1="all_palm" body2="th_base"/>
+    <exclude body1="all_palm" body2="th_proximal"/>
+  </contact>
+
+  <tendon>
+    <fixed name="T_ffa0"  range="-0.47 0.47" user="1236" >
+      <joint joint="ffj0" coef="0.018"/>
+    </fixed>
+    <fixed name="T_ffa1"  range="-0.196 1.61" user="1237" >
+      <joint joint="ffj1" coef="0.018"/>
+    </fixed>
+    <fixed name="T_ffa2"  range="-0.174 1.709" user="1236" >
+      <joint joint="ffj2" coef="0.018"/>
+    </fixed>
+    <fixed name="T_ffa3"  range="-0.227 1.618" user="1237" >
+      <joint joint="ffj3" coef="0.018"/>
+    </fixed>
+    <fixed name="T_mfa0"  range="-0.47 0.47" user="1236" >
+      <joint joint="mfj0" coef="0.018"/>
+    </fixed>
+    <fixed name="T_mfa1"  range="-0.196 1.61" user="1237" >
+      <joint joint="mfj1" coef="0.018"/>
+    </fixed>
+    <fixed name="T_mfa2"  range="-0.174 1.709" user="1236" >
+      <joint joint="mfj2" coef="0.018"/>
+    </fixed>
+    <fixed name="T_mfa3"  range="-0.227 1.618" user="1237" >
+      <joint joint="mfj3" coef="0.018"/>
+    </fixed>
+    <fixed name="T_rfa0"  range="-0.47 0.47" user="1236" >
+      <joint joint="rfj0" coef="0.018"/>
+    </fixed>
+    <fixed name="T_rfa1"  range="-0.196 1.61" user="1237" >
+      <joint joint="rfj1" coef="0.018"/>
+    </fixed>
+    <fixed name="T_rfa2"  range="-0.174 1.709" user="1236" >
+      <joint joint="rfj2" coef="0.018"/>
+    </fixed>
+    <fixed name="T_rfa3"  range="-0.227 1.618" user="1237" >
+      <joint joint="rfj3" coef="0.018"/>
+    </fixed>
+    <fixed name="T_tha0"  range="0.263 1.396" user="1236" >
+      <joint joint="thj0" coef="0.018"/>
+    </fixed>
+    <fixed name="T_tha1"  range="-0.105 1.163" user="1237" >
+      <joint joint="thj1" coef="0.018"/>
+    </fixed>
+    <fixed name="T_tha2"  range="-0.189 1.644" user="1236" >
+      <joint joint="thj2" coef="0.018"/>
+    </fixed>
+    <fixed name="T_tha3"  range="-0.162 1.719" user="1237" >
+      <joint joint="thj3" coef="0.018"/>
+    </fixed>
+
+
+  </tendon>
+
+  <actuator>
+    <general name="ffa0" joint="ffj0" class="base"  />
+    <general name="ffa1" joint="ffj1" class="proximal"/>
+    <general name="ffa2" joint="ffj2" class="medial"/>
+    <general name="ffa3" joint="ffj3" class="distal"/>
+    <general name="mfa0" joint="mfj0" class="base"/>
+    <general name="mfa1" joint="mfj1" class="proximal"/>
+    <general name="mfa2" joint="mfj2" class="medial"/>
+    <general name="mfa3" joint="mfj3" class="distal"/>
+    <general name="rfa0" joint="rfj0" class="base"/>
+    <general name="rfa1" joint="rfj1" class="proximal"/>
+    <general name="rfa2" joint="rfj2" class="medial"/>
+    <general name="rfa3" joint="rfj3" class="distal"/>
+    <general name="tha0" joint="thj0" class="thumb_base"/>
+    <general name="tha1" joint="thj1" class="thumb_proximal"/>
+    <general name="tha2" joint="thj2" class="thumb_medial"/>
+    <general name="tha3" joint="thj3" class="thumb_distal"/>
+  </actuator>
+
+  <sensor>
+    <actuatorfrc actuator="ffa0" name="Saf_ffa0"/>
+    <actuatorfrc actuator="ffa1" name="Saf_ffa1"/>
+    <actuatorfrc actuator="ffa2" name="Saf_ffa2"/>
+    <actuatorfrc actuator="ffa3" name="Saf_ffa3"/>
+    <actuatorfrc actuator="mfa0" name="Saf_mfa0"/>
+    <actuatorfrc actuator="mfa1" name="Saf_mfa1"/>
+    <actuatorfrc actuator="mfa2" name="Saf_mfa2"/>
+    <actuatorfrc actuator="mfa3" name="Saf_mfa3"/>
+    <actuatorfrc actuator="rfa0" name="Saf_rfa0"/>
+    <actuatorfrc actuator="rfa1" name="Saf_rfa1"/>
+    <actuatorfrc actuator="rfa2" name="Saf_rfa2"/>
+    <actuatorfrc actuator="rfa3" name="Saf_rfa3"/>
+    <actuatorfrc actuator="tha0" name="Saf_tha0"/>
+    <actuatorfrc actuator="tha1" name="Saf_tha1"/>
+    <actuatorfrc actuator="tha2" name="Saf_tha2"/>
+    <actuatorfrc actuator="tha3" name="Saf_tha3"/>
+
+    <touch name="St_ffa3" site="Tch_ff_distal"/>
+    <touch name="St_mfa3" site="Tch_mf_distal"/>
+    <touch name="St_rfa3" site="Tch_rf_distal"/>
+    <touch name="St_tha3" site="Tch_th_distal"/>
+
+    <touch name="St_ffa0" site="Tch_ff_base"/>
+    <touch name="St_mfa0" site="Tch_mf_base"/>
+    <touch name="St_rfa0" site="Tch_rf_base"/>
+    <touch name="St_tha0" site="Tch_th_base"/>
+
+    <touch name="St_ffa1" site="Tch_ff_proximal"/>
+    <touch name="St_mfa1" site="Tch_mf_proximal"/>
+    <touch name="St_rfa1" site="Tch_rf_proximal"/>
+    <touch name="St_tha1" site="Tch_th_proximal"/>
+
+    <touch name="St_ffa2" site="Tch_ff_medial"/>
+    <touch name="St_mfa2" site="Tch_mf_medial"/>
+    <touch name="St_rfa2" site="Tch_rf_medial"/>
+    <touch name="St_tha2" site="Tch_th_medial"/>
+
+    <touch name="St_palm" site="Tch_palm"/>
+
+    <jointpos joint="ffj0" name="Sjp_ffj0"/>
+    <jointpos joint="ffj1" name="Sjp_ffj1"/>
+    <jointpos joint="ffj2" name="Sjp_ffj2"/>
+    <jointpos joint="ffj3" name="Sjp_ffj3"/>
+    <jointpos joint="mfj0" name="Sjp_mfj0"/>
+    <jointpos joint="mfj1" name="Sjp_mfj1"/>
+    <jointpos joint="mfj2" name="Sjp_mfj2"/>
+    <jointpos joint="mfj3" name="Sjp_mfj3"/>
+    <jointpos joint="rfj0" name="Sjp_rfj0"/>
+    <jointpos joint="rfj1" name="Sjp_rfj1"/>
+    <jointpos joint="rfj2" name="Sjp_rfj2"/>
+    <jointpos joint="rfj3" name="Sjp_rfj3"/>
+    <jointpos joint="thj0" name="Sjp_thj0"/>
+    <jointpos joint="thj1" name="Sjp_thj1"/>
+    <jointpos joint="thj2" name="Sjp_thj2"/>
+    <jointpos joint="thj3" name="Sjp_thj3"/>
+  </sensor>
+
+</mujocoinclude>

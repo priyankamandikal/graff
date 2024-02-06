@@ -8,6 +8,8 @@
         <map force="0.1" fogend="5" />
         <scale forcewidth='0.1' contactwidth='0.06' contactheight='0.01' jointwidth='0.17' jointlength='2.50' framewidth='0.1' framelength='1.0'/>
     </visual>
+
+
     <default class="main">
         <mesh scale="0.001 0.001 0.001" />
         <joint limited="true" margin="0.01" armature="0.001" damping="0.05" frictionloss="0.001" />
@@ -32,6 +34,8 @@
             <general user="0 1 0.03 0.0939711 0.513477 0.0358776 1.23598 8.40409 0.485031 6.04244 1.02187 0.175297 0.121642 0 0 0" />
         </default>
     </default>
+
+
     <asset>
         <texture type="cube" name="texgeom" builtin="flat" mark="cross" rgb1="0.3 0.6 0.5" rgb2="0.3 0.6 0.5" width="127" height="762" />
         <texture type="cube" name="wood" file="wood.png" />

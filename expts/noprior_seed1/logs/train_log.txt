@@ -1,0 +1,46 @@
+2024-01-24 13:09:52.227301: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-01-24 13:09:52.265436: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-24 13:09:53.006521: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Logging to /tmp/openai-2024-01-24-13-09-54-166066
+Creating dummy env object to get spaces
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+cam:  egocentric
+device_id:  1
+Found 4 GPUs for rendering. Using device 1.
+Could not initialize EGL
+Traceback (most recent call last):
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff/train.py", line 212, in <module>
+    main()
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff/train.py", line 74, in main
+    envs = make_vec_envs(args.env_name, args.seed, args.num_processes,
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff/a2c_ppo_acktr/envs.py", line 82, in make_vec_envs
+    envs = ShmemVecEnv(envs, context='spawn')
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 36, in __init__
+    dummy = env_fns[0]()
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff/a2c_ppo_acktr/envs.py", line 22, in _thunk
+    env = gym.make(env_id, object=object, device_id=device_id, process_id=rank, **kwargs)
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff_rl/lib/python3.10/site-packages/gym/envs/registration.py", line 156, in make
+    return registry.make(id, **kwargs)
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff_rl/lib/python3.10/site-packages/gym/envs/registration.py", line 101, in make
+    env = spec.make(**kwargs)
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff_rl/lib/python3.10/site-packages/gym/envs/registration.py", line 73, in make
+    env = cls(**_kwargs)
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff/envs/mj_envs/dex_manip/graff.py", line 91, in __init__
+    mujoco_env.MujocoEnv.__init__(self, model_path, frame_skip)
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff/envs/mj_envs/utils/mujoco_env.py", line 61, in __init__
+    observation, _reward, done, _info = self.step(np.zeros(self.model.nu))
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff/envs/mj_envs/dex_manip/graff.py", line 216, in step
+    ob = self.get_obs()
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff/envs/mj_envs/dex_manip/graff.py", line 369, in get_obs
+    cnn_inp[cam] = self._get_cnn_obs(cam)
+  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff/envs/mj_envs/dex_manip/graff.py", line 265, in _get_cnn_obs
+    rgbd_frame = self.sim.render(width=self.frame_size[0], height=self.frame_size[1],
+  File "graff_rl/lib/python3.10/site-packages/mujoco_py/mjsim.pyx", line 156, in mujoco_py.cymj.MjSim.render
+  File "graff_rl/lib/python3.10/site-packages/mujoco_py/mjsim.pyx", line 158, in mujoco_py.cymj.MjSim.render
+  File "graff_rl/lib/python3.10/site-packages/mujoco_py/mjrendercontext.pyx", line 46, in mujoco_py.cymj.MjRenderContext.__init__
+  File "graff_rl/lib/python3.10/site-packages/mujoco_py/mjrendercontext.pyx", line 114, in mujoco_py.cymj.MjRenderContext._setup_opengl_context
+  File "graff_rl/lib/python3.10/site-packages/mujoco_py/opengl_context.pyx", line 130, in mujoco_py.cymj.OffscreenOpenGLContext.__init__
+RuntimeError: Failed to initialize OpenGL
