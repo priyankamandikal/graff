@@ -78,7 +78,9 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
 
         # hand contact points
         self.touch_sensor_names = [name for name in self.sim.model.sensor_names if 'ST_Tch' in name]
-        self.touch_sensor_names_obs = ["ST_Tch_fftip", "ST_Tch_mftip", "ST_Tch_rftip", "ST_Tch_lftip", "ST_Tch_thtip", "ST_Tch_ffproximal", "ST_Tch_mfproximal", "ST_Tch_rfproximal", "ST_Tch_lfproximal"]
+        #TODO: change sensor name
+        # self.touch_sensor_names_obs = ["ST_Tch_fftip", "ST_Tch_mftip", "ST_Tch_rftip", "ST_Tch_lftip", "ST_Tch_thtip", "ST_Tch_ffproximal", "ST_Tch_mfproximal", "ST_Tch_rfproximal", "ST_Tch_lfproximal"]
+        self.touch_sensor_names_obs = ["ST_Tch_ff_distal", "ST_Tch_mf_distal", "ST_Tch_rf_distal", "ST_Tch_th_distal", "ST_Tch_ff_proximal", "ST_Tch_mf_proximal", "ST_Tch_rf_proximal" ]
 
         # camera
         self.camera_id_first_person = self.model.camera_name2id('first_person')
@@ -99,17 +101,18 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         self.sim._render_context_offscreen.vopt.flags[11] = self.sim._render_context_offscreen.vopt.flags[12] = 1
 
         # change actuator sensitivity
+        #TODO: change actuator sensitivity
+        # self.sim.model.actuator_gainprm[
+        # self.sim.model.actuator_name2id('A_WRJ1'):self.sim.model.actuator_name2id('A_WRJ0') + 1, :3] = np.array(
+        #     [10, 0, 0])
         self.sim.model.actuator_gainprm[
-        self.sim.model.actuator_name2id('A_WRJ1'):self.sim.model.actuator_name2id('A_WRJ0') + 1, :3] = np.array(
-            [10, 0, 0])
-        self.sim.model.actuator_gainprm[
-        self.sim.model.actuator_name2id('A_FFJ3'):self.sim.model.actuator_name2id('A_THJ0') + 1, :3] = np.array(
+        self.sim.model.actuator_name2id('A_ffa0'):self.sim.model.actuator_name2id('A_tha3') + 1, :3] = np.array(
             [1, 0, 0])
+        # self.sim.model.actuator_biasprm[
+        # self.sim.model.actuator_name2id('A_WRJ1'):self.sim.model.actuator_name2id('A_WRJ0') + 1, :3] = np.array(
+        #     [0, -10, 0])
         self.sim.model.actuator_biasprm[
-        self.sim.model.actuator_name2id('A_WRJ1'):self.sim.model.actuator_name2id('A_WRJ0') + 1, :3] = np.array(
-            [0, -10, 0])
-        self.sim.model.actuator_biasprm[
-        self.sim.model.actuator_name2id('A_FFJ3'):self.sim.model.actuator_name2id('A_THJ0') + 1, :3] = np.array(
+        self.sim.model.actuator_name2id('A_ffa0'):self.sim.model.actuator_name2id('A_tha3') + 1, :3] = np.array(
             [0, -1, 0])
 
         # obtain a few env settings
@@ -197,6 +200,7 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
 
 
     def chamfer_dist(self, set1, set2):
+        
         set1to2 = [np.min(np.linalg.norm(pt-set2, axis=1)) for pt in set1]
         set2to1 = [np.min(np.linalg.norm(pt-set1, axis=1)) for pt in set2]
         chamfer_dist = (np.mean(set1to2) + np.mean(set2to1)) / 2.
@@ -401,7 +405,8 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         """
         qp = self.data.qpos.ravel().copy()
         qv = self.data.qvel.ravel().copy()
-        hand_qpos = qp[:30]
+        # hand_qpos = qp[:30]
+        hand_qpos = qp[:22]
         obj_pos = self.data.body_xpos[self.obj_bid].ravel()
         palm_pos = self.data.site_xpos[self.S_grasp_sid].ravel()
         return dict(hand_qpos=hand_qpos, obj_pos=obj_pos, palm_pos=palm_pos,

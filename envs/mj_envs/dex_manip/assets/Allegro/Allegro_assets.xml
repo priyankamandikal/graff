@@ -258,27 +258,27 @@
     <actuatorfrc actuator="A_tha2" name="Saf_tha2"/>
     <actuatorfrc actuator="A_tha3" name="Saf_tha3"/>
 
-    <touch name="St_ffa3" site="Tch_ff_distal"/>
-    <touch name="St_mfa3" site="Tch_mf_distal"/>
-    <touch name="St_rfa3" site="Tch_rf_distal"/>
-    <touch name="St_tha3" site="Tch_th_distal"/>
+    <touch name="ST_Tch_ff_distal" site="Tch_ff_distal"/>
+    <touch name="ST_Tch_mf_distal" site="Tch_mf_distal"/>
+    <touch name="ST_Tch_rf_distal" site="Tch_rf_distal"/>
+    <touch name="ST_Tch_th_distal" site="Tch_th_distal"/>
 
-    <touch name="St_ffa0" site="Tch_ff_base"/>
-    <touch name="St_mfa0" site="Tch_mf_base"/>
-    <touch name="St_rfa0" site="Tch_rf_base"/>
-    <touch name="St_tha0" site="Tch_th_base"/>
+    <touch name="ST_Tch_ff_base" site="Tch_ff_base"/>
+    <touch name="ST_Tch_mf_base" site="Tch_mf_base"/>
+    <touch name="ST_Tch_rf_base" site="Tch_rf_base"/>
+    <touch name="ST_Tch_th_base" site="Tch_th_base"/>
 
-    <touch name="St_ffa1" site="Tch_ff_proximal"/>
-    <touch name="St_mfa1" site="Tch_mf_proximal"/>
-    <touch name="St_rfa1" site="Tch_rf_proximal"/>
-    <touch name="St_tha1" site="Tch_th_proximal"/>
+    <touch name="ST_Tch_ff_proximal" site="Tch_ff_proximal"/>
+    <touch name="ST_Tch_mf_proximal" site="Tch_mf_proximal"/>
+    <touch name="ST_Tch_rf_proximal" site="Tch_rf_proximal"/>
+    <touch name="ST_Tch_th_proximal" site="Tch_th_proximal"/>
 
-    <touch name="St_ffa2" site="Tch_ff_medial"/>
-    <touch name="St_mfa2" site="Tch_mf_medial"/>
-    <touch name="St_rfa2" site="Tch_rf_medial"/>
-    <touch name="St_tha2" site="Tch_th_medial"/>
+    <touch name="ST_Tch_ff_medial" site="Tch_ff_medial"/>
+    <touch name="ST_Tch_mf_medial" site="Tch_mf_medial"/>
+    <touch name="ST_Tch_rf_medial" site="Tch_rf_medial"/>
+    <touch name="ST_Tch_th_medial" site="Tch_th_medial"/>
 
-    <touch name="St_palm" site="Tch_palm"/>
+    <touch name="ST_Tch_palm" site="Tch_palm"/>
 
     <jointpos joint="ffj0" name="Sjp_ffj0"/>
     <jointpos joint="ffj1" name="Sjp_ffj1"/>
