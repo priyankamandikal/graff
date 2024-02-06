@@ -5,7 +5,6 @@
         
     </asset>
 
-
     <!-- ======= WORLD ======= -->
     <worldbody>
         <light directional='false' diffuse='.7 .7 .7' specular='0.03 0.03 0.03' pos='-1 -1.0 4.0' dir='1 1.0 -4'/>
