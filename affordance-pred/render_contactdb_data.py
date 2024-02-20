@@ -201,7 +201,6 @@ class GraspV0(mujoco_env.MujocoEnv, utils.EzPickle):
                                      mode='offscreen', camera_name=cam,
                                      depth=True)  # , device_id=self.device_id)
         img_frame = rgbd_frame[0][::-1]  # rgb: (H,W,3)
-
         if self.grasp_attrs_dict['depth_inp']:
             depth_frame = ((rgbd_frame[1][::-1] - self.min_depth[cam]) / (self.max_depth[cam] - self.min_depth[cam]) * 255).astype(np.uint8)  # (H,W)
             depth_frame = np.expand_dims(depth_frame, axis=-1)  # (H,W,1)
@@ -270,8 +269,11 @@ class GraspV0(mujoco_env.MujocoEnv, utils.EzPickle):
             else:
                 cv2.imwrite(join(input_dir, "%s.png"%str(angle).zfill(3)), img_frame)
                 cv2.imwrite(join(gt_dir, "%s.png"%str(angle).zfill(3)), aff_frame)
-
-
+                cv2.imshow('Image', img_frame)
+                cv2.imshow('Affordance Mask', aff_frame)
+                print("hello %s"%str(angle).zfill(3))
+            
+            # cv2.waitKey(0)
 if __name__=='__main__':
     import argparse
     parser = argparse.ArgumentParser()

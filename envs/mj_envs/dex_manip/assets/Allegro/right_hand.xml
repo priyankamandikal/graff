@@ -4,37 +4,37 @@
   <!-- <worldbody> -->
     <body name="all_palm" quat="1 0 0 1" pos="0 0 0.105" childclass="allegro_right" >
       <inertial mass="0.4154" pos="0 0 0.000475" diaginertia="1e-4 1e-4 1e-4"/> 
-      <site name="Tch_palm" pos="0 0 0.105"/>
-      <site name="S_grasp"  type="sphere" rgba="0 0 0 0" size="0.01" pos=".007 -.01 0.07" quat="0.0087 -0.6 -0.0034 -0.81  " />
+      <site class="D_Touch" name="Tch_palm" pos="0 0 -0.05"/>
+      <site name="S_grasp"  type="sphere" rgba="1 0 0 1" size="0.01" pos=".00 .01 0.0" euler="0 0.0 -1.57 " />
            
-      <geom name="palm_visual" class="palm_visual" mesh="base_link"/>
-      <geom class="palm_collision"/>
+      <geom name="C_palm" class="palm_visual" mesh="base_link"/>
+      <geom name="palm" class="palm_collision"/>
       <!-- First finger -->
       <body name="ff_base" pos="0 0.0435 -0.001542" quat="0.999048 -0.0436194 0 0">
         <joint name="ffj0" class="base"/>
-        <site name="Tch_ff_base" pos="0 0 0"/>
+        <site class="D_Touch" name="Tch_ff_base" pos="0 0 0"/>
 
-        <geom class="base_visual"/>
-        <geom class="base_collision"/>
+        <geom name="C_ffbase" class="base_visual"/>
+        <geom name="ff_base" class="base_collision"/>
         <body name="ff_proximal" pos="0 0 0.0164">
           <joint name="ffj1" class="proximal"/>
-          <site name="Tch_ff_proximal" pos="0 0 0.0164"/>
-          <geom class="proximal_visual"/>
-          <geom class="proximal_collision"/>
+          <site class="D_Touch" name="Tch_ff_proximal" pos="0 0 0.0164"/>
+          <geom name="C_ffproximal" class="proximal_visual"/>
+          <geom name="ff_proximal" class="proximal_collision"/>
           <body name="ff_medial" pos="0 0 0.054">
-            <site name="Tch_ff_medial" pos="0 0 0.054"/>
+            <site class="D_Touch" name="Tch_ff_medial" pos="0 0 0.0"/>
             <joint name="ffj2" class="medial"/>
-            <geom class="medial_visual"/>
-            <geom class="medial_collision"/>
+            <geom name="C_ffmedial" class="medial_visual"/>
+            <geom name="ff_medial" class="medial_collision"/>
             <body name="ff_distal" pos="0 0 0.0384">
-              <site name="Tch_ff_distal" pos="0 0 0.0384"/>
+              <site class="D_Touch" name="Tch_ff_distal" pos="0 0 0.0"/>
               <joint name="ffj3" class="distal"/>
-              <geom class="distal_visual"/>
-              <geom class="distal_collision"/>
+              <geom name="C_ffdistal" class="distal_visual"/>
+              <geom name="ff_distal" class="distal_collision"/>
               <body name="ff_tip">
-                <site name="Tch_ff_tip" pos="0 0 0.0384"/>
-                <geom class="fingertip_visual"/>
-                <geom class="fingertip_collision"/>
+                <site class="D_Touch" name="Tch_ff_tip" pos="0 0 0.03"/>
+                <geom name="C_fftip" class="fingertip_visual"/>
+                <geom name="ff_tip" class="fingertip_collision"/>
               </body>
             </body>
           </body>
@@ -42,29 +42,29 @@
       </body>
       <!-- Middle finger -->
       <body name="mf_base" pos="0 0 0.0007">
-        <site name="Tch_mf_base" pos="0 0 0.0007"/>
+        <site class="D_Touch" name="Tch_mf_base" pos="0 0 0.0007"/>
         <joint name="mfj0" class="base"/>
-        <geom class="base_visual"/>
-        <geom class="base_collision"/>
+        <geom name="C_mfbase" class="base_visual"/>
+        <geom name="mf_base" class="base_collision"/>
         <body name="mf_proximal" pos="0 0 0.0164">
-          <site name="Tch_mf_proximal" pos="0 0 0.0164"/>
+          <site class="D_Touch" name="Tch_mf_proximal" pos="0 0 0.0164"/>
           <joint name="mfj1" class="proximal"/>
-          <geom class="proximal_visual"/>
-          <geom class="proximal_collision"/>
+          <geom name="C_mfproximal" class="proximal_visual"/>
+          <geom name="mf_proximal" class="proximal_collision"/>
           <body name="mf_medial" pos="0 0 0.054">
-            <site name="Tch_mf_medial" pos="0 0 0.054"/>
+            <site class="D_Touch" name="Tch_mf_medial" pos="0 0 0.0"/>
             <joint name="mfj2" class="medial"/>
-            <geom class="medial_visual"/>
-            <geom class="medial_collision"/>
+            <geom name="C_mfmedial" class="medial_visual"/>
+            <geom name="mf_medial" class="medial_collision"/>
             <body name="mf_distal" pos="0 0 0.0384">
-              <site name="Tch_mf_distal" pos="0 0 0.0384"/>
+              <site class="D_Touch" name="Tch_mf_distal" pos="0 0 0.0"/>
               <joint name="mfj3" class="distal"/>
-              <geom class="distal_visual"/>
-              <geom class="distal_collision"/>
+              <geom name="C_mfdistal" class="distal_visual"/>
+              <geom name="mf_distal" class="distal_collision"/>
               <body name="mf_tip">
-                <site name="Tch_mf_tip" pos="0 0 0.0384"/>
-                <geom class="fingertip_visual"/>
-                <geom class="fingertip_collision"/>
+                <site class="D_Touch" name="Tch_mf_tip" pos="0 0 0.03"/>
+                <geom name="C_mftip" class="fingertip_visual"/>
+                <geom name="mf_tip" class="fingertip_collision"/>
               </body>
             </body>
           </body>
@@ -72,29 +72,29 @@
       </body>
       <!-- Ring finger -->
       <body name="rf_base" pos="0 -0.0435 -0.001542" quat="0.999048 0.0436194 0 0">
-        <site name="Tch_rf_base" pos="0 0 0"/>
+        <site class="D_Touch" name="Tch_rf_base" pos="0 0 0"/>
         <joint name="rfj0" class="base"/>
-        <geom class="base_visual"/>
-        <geom class="base_collision"/>
+        <geom name="C_rfbase" class="base_visual"/>
+        <geom name="rf_base" class="base_collision"/>
         <body name="rf_proximal" pos="0 0 0.0164">
-          <site name="Tch_rf_proximal" pos="0 0 0.0164"/>
+          <site class="D_Touch" name="Tch_rf_proximal" pos="0 0 0.0164"/>
           <joint name="rfj1" class="proximal"/>
-          <geom class="proximal_visual"/>
-          <geom class="proximal_collision"/>
+          <geom name="C_rfproximal" class="proximal_visual"/>
+          <geom name="rf_proximal" class="proximal_collision"/>
           <body name="rf_medial" pos="0 0 0.054">
-            <site name="Tch_rf_medial" pos="0 0 0.054"/>
+            <site class="D_Touch" name="Tch_rf_medial" pos="0 0 0.0"/>
             <joint name="rfj2" class="medial"/>
-            <geom class="medial_visual"/>
-            <geom class="medial_collision"/>
+            <geom name="C_rfmedial" class="medial_visual"/>
+            <geom name="rf_medial" class="medial_collision"/>
             <body name="rf_distal" pos="0 0 0.0384">
-              <site name="Tch_rf_distal" pos="0 0 0.0384"/>
+              <site class="D_Touch" name="Tch_rf_distal" pos="0 0 0.0"/>
               <joint name="rfj3" class="distal"/>
-              <geom class="distal_visual"/>
-              <geom class="distal_collision"/>
+              <geom name="C_rfdistal" class="distal_visual"/>
+              <geom name="rf_distal" class="distal_collision"/>
               <body name="rf_tip">
-                <site name="Tch_rf_tip" pos="0 0 0.0384"/>
-                <geom class="fingertip_visual"/>
-                <geom class="fingertip_collision"/>
+                <site class="D_Touch" name="Tch_rf_tip" pos="0 0 0.03"/>
+                <geom name="C_rftip" class="fingertip_visual"/>
+                <geom name="rf_tip" class="fingertip_collision"/>
               </body>
             </body>
           </body>
@@ -103,28 +103,28 @@
       <!-- Thumb -->
       <body name="th_base" pos="-0.0182 0.019333 -0.045987" quat="0.477714 -0.521334 -0.521334 -0.477714">
         <joint name="thj0" class="thumb_base"/>
-        <site name="Tch_th_base" pos="0 0 0"/>
-        <geom class="visual" mesh="link_12.0_right"/>
-        <geom class="thumb_base_collision"/>
+        <site class="D_Touch" name="Tch_th_base" pos="0 0 0"/>
+        <geom name="C_thbase" class="visual" mesh="link_12.0_right"/>
+        <geom name="th_base" class="thumb_base_collision"/>
         <body name="th_proximal" pos="-0.027 0.005 0.0399">
-          <site name="Tch_th_proximal" pos="0 0 0"/>
+          <site class="D_Touch" name="Tch_th_proximal" pos="0 0 0"/>
           <joint name="thj1" class="thumb_proximal"/>
-          <geom class="visual" mesh="link_13.0"/>
-          <geom class="thumb_proximal_collision"/>
+          <geom name="C_thproximal"  class="visual" mesh="link_13.0"/>
+          <geom name="th_proximal" class="thumb_proximal_collision"/>
           <body name="th_medial" pos="0 0 0.0177">
-            <site name="Tch_th_medial" pos="0 0 0"/>
+            <site class="D_Touch" name="Tch_th_medial" pos="0 0 0.0177"/>
             <joint name="thj2" class="thumb_medial"/>
-            <geom class="visual" mesh="link_14.0"/>
-            <geom class="thumb_medial_collision"/>
+            <geom name="C_thmedial"  class="visual" mesh="link_14.0"/>
+            <geom name="th_medial" class="thumb_medial_collision"/>
             <body name="th_distal" pos="0 0 0.0514">
-              <site name="Tch_th_distal" pos="0 0 0"/>
+              <site class="D_Touch" name="Tch_th_distal" pos="0 0 0.0114"/>
               <joint name="thj3" class="thumb_distal"/>
-              <geom class="visual" mesh="link_15.0"/>
-              <geom class="thumb_distal_collision"/>
+              <geom name="C_thdistal"  class="visual" mesh="link_15.0"/>
+              <geom name="th_distal" class="thumb_distal_collision"/>
               <body name="th_tip">
-                <site name="Tch_th_tip" pos="0 0 0"/>
-                <geom class="thumbtip_visual"/>
-                <geom class="thumbtip_collision"/>
+                <site class="D_Touch" name="Tch_th_tip" pos="0 0 0.041"/>
+                <geom name="C_thtip" class="thumbtip_visual"/>
+                <geom name="th_tip" class="thumbtip_collision"/>
               </body>
             </body>
           </body>

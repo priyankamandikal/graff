@@ -406,6 +406,7 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         qp = self.data.qpos.ravel().copy()
         qv = self.data.qvel.ravel().copy()
         # hand_qpos = qp[:30]
+        ###################################### CHANGED HERE ########################################
         hand_qpos = qp[:22]
         obj_pos = self.data.body_xpos[self.obj_bid].ravel()
         palm_pos = self.data.site_xpos[self.S_grasp_sid].ravel()

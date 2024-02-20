@@ -12,14 +12,19 @@
   </visual>
 
   <default>
+    <default class="D_Touch">
+      <site size="0.004 0.004 0.003" group="4" type="box" rgba="0.8 0.8 0.8 0.5" />
+      <general user="0 1 0.03 0.0939711 0.513477 0.0358776 1.23598 8.40409 0.485031 6.04244 1.02187 0.175297 0.121642 0 0 0" />
+    </default>
     <default class="allegro_right">
       <joint axis="0 1 0" damping=".1"/>
       <position kp="0.3"/>
       <geom density="800"/>
       <tendon limited="true" />
-      <general ctrllimited="true" ctrlrange="-1 1" user="0 1 0.03 0.0939711 0.513477 0.0358776 1.23598 8.40409 0.485031 6.04244 1.02187 0.175297 0.121642 0 0 0" />
+      <general ctrllimited="true" ctrlrange="-1 1" />
       <default class="visual">
-        <geom type="mesh" contype="0" conaffinity="0" group="2" material="black"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" material="black"/>
+        <general user="0 1 0.03 0.0939711 0.513477 0.0358776 1.23598 8.40409 0.485031 6.04244 1.02187 0.175297 0.121642 0 0 0" />
         <default class="palm_visual">
           <geom mesh="base_link"/>
         </default>
@@ -166,7 +171,32 @@
     <exclude body1="all_palm" body2="rf_base"/>
     <exclude body1="all_palm" body2="th_base"/>
     <exclude body1="all_palm" body2="th_proximal"/>
+    
   </contact>
+  <!-- <contact>
+    <pair geom1="palm" geom2="ff_base"/>
+    <pair geom1="ff_base" geom2="ff_proximal"/>
+    <pair geom1="ff_proximal" geom2="ff_medial"/>
+    <pair geom1="ff_medial" geom2="ff_distal"/>
+    <pair geom1="ff_distal" geom2="ff_tip"/>
+    <pair geom1="palm" geom2="mf_base"/>
+    <pair geom1="mf_base" geom2="mf_proximal"/>
+    <pair geom1="mf_proximal" geom2="mf_medial"/>
+    <pair geom1="mf_medial" geom2="mf_distal"/>
+    <pair geom1="mf_distal" geom2="mf_tip"/>
+    <pair geom1="palm" geom2="rf_base"/>
+    <pair geom1="rf_base" geom2="rf_proximal"/>
+    <pair geom1="rf_proximal" geom2="rf_medial"/>
+    <pair geom1="rf_medial" geom2="rf_distal"/>
+    <pair geom1="rf_distal" geom2="rf_tip"/>
+    <pair geom1="palm" geom2="th_base"/>
+    <pair geom1="th_base" geom2="th_proximal"/>
+    <pair geom1="th_proximal" geom2="th_medial"/>
+    <pair geom1="th_medial" geom2="th_distal"/>
+    <pair geom1="th_distal" geom2="th_tip"/>
+
+  </contact> -->
+
 
   <tendon>
     <fixed name="T_ffa0"  range="-0.47 0.47" user="1236" >

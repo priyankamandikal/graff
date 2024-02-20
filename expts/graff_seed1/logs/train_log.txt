@@ -1,77 +1,77 @@
-2024-02-06 17:27:45.375118: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:45.415625: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:40.287798: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:40.312238: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:46.101618: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-Logging to /tmp/openai-2024-02-06-17-27-47-122307
+2024-02-06 21:11:40.788293: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Logging to /tmp/openai-2024-02-06-21-11-41-788677
 Creating dummy env object to get spaces
 /home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff_rl/lib/python3.10/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
 Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
 img_keys:  ['egocentric']
-2024-02-06 17:27:49.749562: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:49.773345: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:49.781603: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:43.873113: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:43.903555: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:49.801217: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:49.804755: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:43.993709: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:43.999214: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.024320: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:49.820057: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:49.831804: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.042123: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:49.834912: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:49.847292: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:49.851503: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:49.853394: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.069684: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.085557: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.099495: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.111697: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.115732: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:49.860446: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:49.867645: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.116160: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:49.885153: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.142689: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:49.898032: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.145196: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:49.901956: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:49.910762: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.162277: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.209734: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.210223: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:49.934089: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.234579: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.242070: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.256303: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:50.069274: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:50.076288: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:50.087533: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:50.111641: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:50.118974: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.273526: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:50.119403: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.283126: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:50.124453: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.324715: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.333473: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.371498: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:50.143268: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.378700: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:50.149286: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:50.181345: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.382075: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.416588: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.425445: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:44.428641: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-02-06 21:11:44.429328: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:50.205935: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:50.254777: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.464510: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:50.288804: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-02-06 17:27:50.338867: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-02-06 21:11:44.475463: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-02-06 17:27:50.341439: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.430796: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.471168: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.534950: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.550016: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.612744: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.722193: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.786531: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.792516: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.920162: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:50.952732: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:51.018920: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:51.323072: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:51.336179: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:51.336179: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-2024-02-06 17:27:51.344149: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:44.543990: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:44.675095: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:44.688511: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:44.697909: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:44.747784: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:44.994029: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:45.055523: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:45.071830: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:45.148542: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:45.232661: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:45.279344: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:45.347590: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:45.370089: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:45.388428: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-02-06 21:11:45.489343: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
 /home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff_rl/lib/python3.10/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
 /home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff_rl/lib/python3.10/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
@@ -90,165 +90,5 @@ To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, re
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
 /home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff_rl/lib/python3.10/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
   warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
-Process SpawnProcess-14:
-Process SpawnProcess-13:
-Process SpawnProcess-15:
-Process SpawnProcess-10:
-Process SpawnProcess-7:
-Process SpawnProcess-9:
-Process SpawnProcess-11:
-Process SpawnProcess-6:
-Process SpawnProcess-5:
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 123, in _subproc_worker
-    cmd, data = pipe.recv()
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 250, in recv
-    buf = self._recv_bytes()
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
-    buf = self._recv(4)
-  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 123, in _subproc_worker
-    cmd, data = pipe.recv()
-  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 123, in _subproc_worker
-    cmd, data = pipe.recv()
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 250, in recv
-    buf = self._recv_bytes()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
-    chunk = read(handle, remaining)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 250, in recv
-    buf = self._recv_bytes()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
-    buf = self._recv(4)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
-    buf = self._recv(4)
-  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 123, in _subproc_worker
-    cmd, data = pipe.recv()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
-    chunk = read(handle, remaining)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
-    chunk = read(handle, remaining)
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 250, in recv
-    buf = self._recv_bytes()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
-    buf = self._recv(4)
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
-    chunk = read(handle, remaining)
-  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 123, in _subproc_worker
-    cmd, data = pipe.recv()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 250, in recv
-    buf = self._recv_bytes()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
-    buf = self._recv(4)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
-    chunk = read(handle, remaining)
-ConnectionResetError: [Errno 104] Connection reset by peer
-ConnectionResetError: [Errno 104] Connection reset by peer
-ConnectionResetError: [Errno 104] Connection reset by peer
-ConnectionResetError: [Errno 104] Connection reset by peer
-Traceback (most recent call last):
-ConnectionResetError: [Errno 104] Connection reset by peer
-Traceback (most recent call last):
-Traceback (most recent call last):
-Traceback (most recent call last):
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 123, in _subproc_worker
-    cmd, data = pipe.recv()
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 250, in recv
-    buf = self._recv_bytes()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
-    buf = self._recv(4)
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
-    chunk = read(handle, remaining)
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 123, in _subproc_worker
-    cmd, data = pipe.recv()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 250, in recv
-    buf = self._recv_bytes()
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
-    buf = self._recv(4)
-  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 123, in _subproc_worker
-    cmd, data = pipe.recv()
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
-    chunk = read(handle, remaining)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 250, in recv
-    buf = self._recv_bytes()
-  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
-    buf = self._recv(4)
-ConnectionResetError: [Errno 104] Connection reset by peer
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
-    chunk = read(handle, remaining)
-  File "/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/baselines_graff/baselines/common/vec_env/shmem_vec_env.py", line 123, in _subproc_worker
-    cmd, data = pipe.recv()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 250, in recv
-    buf = self._recv_bytes()
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
-    buf = self._recv(4)
-  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
-    chunk = read(handle, remaining)
-ConnectionResetError: [Errno 104] Connection reset by peer
-ConnectionResetError: [Errno 104] Connection reset by peer
-ConnectionResetError: [Errno 104] Connection reset by peer
-Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
-img_keys:  ['egocentric']
-Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
-img_keys:  ['egocentric']
-Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
-img_keys:  ['egocentric']
-Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
-img_keys:  ['egocentric']
-Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
-img_keys:  ['egocentric']
-Found 4 GPUs for rendering. Using device 0.
-Found 4 GPUs for rendering. Using device 0.
-Found 4 GPUs for rendering. Using device 0.
-Found 4 GPUs for rendering. Using device 0.
-Found 4 GPUs for rendering. Using device 0.
-Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
-img_keys:  ['egocentric']
-Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
-img_keys:  ['egocentric']
-Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
-img_keys:  ['egocentric']
-Found 4 GPUs for rendering. Using device 0.
-Observation Space:  Dict(mlp:Box(464,), egocentric:Box(128, 128, 5))
-img_keys:  ['egocentric']
-Found 4 GPUs for rendering. Using device 0.
-Found 4 GPUs for rendering. Using device 0.
-Found 4 GPUs for rendering. Using device 0.
+/home/aawizard/Desktop/courses/winter_q2/project/Graff-RL/graff_rl/lib/python3.10/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))

@@ -13,16 +13,14 @@
         <!--    Camera faces down
                 Pos and Frame orientation: right hand thumb rule
                     x - middle, y - index, z - thumb -->
-        <camera name="fixed" pos="0 -0.7 0.7" quat="0.92388 0.382683 0 0" />
-        <!--<camera name="first_person" pos="0 -0.8 0.8" quat="0.92388 0.382683 0 0" /> --> <!-- (x,y,z):(45,0,0) -->
-        <!--<camera name="first_person" pos="0 -0.8 0.8" euler="0.7853982 0 0" /> --> <!-- (x,y,z):(45,0,0) -->
-        <camera name="first_person" pos="0 -0.7 0.7" axisangle="1 0 0 0.7853982" /> <!-- (x,y,z):(45,0,0) -->
+        <camera name="fixed" pos="0 -0.3 1.1" euler="0.28 0.0 0" />
+        <camera name="first_person" pos="0 -0.3 1.1" euler="0.28 0.0 0" /> <!-- (x,y,z):(45,0,0) -->
         <camera name="left" pos="-1.0 0 0.6" axisangle="0.4472136 -0.4472136 -0.7745967 1.8234766" /> <!-- (z,x,y):(-90,60,0) -->
         <camera name="right" pos="1.0 0 0.6" axisangle="0.4472136 0.4472136 0.7745967 1.8234766" /> <!-- (z,x,y):(90,60,0) -->
 
         <!-- ======= TABLE ======= -->
         <body name="table">
-            <!-- <geom size="0.5 0.5 0.025" type="plane" material="table2d" /> --> <!-- Plane has better contacts -->
+            <!-- <geom size="0.5 0.5 0.025" type="plane" material="table2d" />  Plane has better contacts -->
             <geom name='table_base' size="0.85 0.45 0.025" pos="0 0 -0.025" type="box" material="table_ycb" />
             <geom name='table_leg1' size="0.04 0.5" pos="0.8 0.4 -0.501" quat="0 1 0 0" type="cylinder" contype="0" conaffinity="0" />
             <geom name='table_leg2' size="0.04 0.5" pos="-0.8 0.4 -0.501" quat="0 1 0 0" type="cylinder" contype="0" conaffinity="0" />
@@ -31,11 +29,11 @@
         </body>
 
         <!-- ======= HAND ======= -->
-        <body name="forearm" pos="0 -0.3 0.7" euler="-3.14 0 0">
+            <body name="forearm" pos="0 -0.25 0.5" euler="-2.14 0 0">
             <!-- Camera to track hand com 7.5 cm above and 2.5 cm behind the com, at an elevation of 45 deg
             Note that camera xes are wrt the object axis which is different from world axes -->
-            <camera name="egocentric" mode="trackcom" pos="0 0.5 0" axisangle="0 0.9238795 0.3826834 3.1415927" /> <!-- (y,x,z):(180,-45,0) -->
-            <camera name="egocentric_zoom" mode="trackcom" pos="0 0.15 0.35" axisangle="0 0.9238795 0.3826834 3.1415927" fovy="75" /> <!-- (y,x,z):(180,-45,0) -->
+            <camera name="egocentric" mode="trackcom" pos="0.0 -0.47845019 -0.36549339" euler="2.42 0.0 0" /> <!-- (y,x,z):(180,-45,0) -->
+            <camera name="egocentric_zoom" mode="trackcom" pos="0 -0.21421771 -0.06519155"  euler="2.42 0.0 0" fovy="75" /> <!-- (y,x,z):(180,-45,0) -->
             <joint name="ARTx" pos="0 0 0" axis="1 0 0" type="slide" range="-0.25 0.25" damping="20" />
             <joint name="ARTy" pos="0 0 0" axis="0 -1 0" type="slide" range="0 0.2" damping="20" />
             <joint name="ARTz" pos="0 0 0" axis="0 0 -1" type="slide" range="-0.3 0.5" damping="20" />
@@ -43,8 +41,6 @@
             <joint name="ARRy" pos="0 0 0" axis="0 1 0" range="-.75 .75" damping="20" />
             <joint name="ARRz" pos="0 0 0" axis="0 0 1" range="-.75 .75" damping="20" />
             <geom name="mount" type="cylinder" size="0.063 .01" />
-            <!-- <geom name="V_forearm" class="D_Vizual" pos="0 -.01 .181" euler="0 0 -1.57"  mesh="forearm_simple" /> -->
-            <!-- <geom name="C_forearm1" class="DC_Hand" size="0.05 0.033" pos="0 0 0.29" type="capsule" rgba="0.4 0.5 0.6 0.1" /> -->
             <!-- ======= Allegro ======= -->
             <include file="../../Allegro/right_hand.xml"/>
         </body>

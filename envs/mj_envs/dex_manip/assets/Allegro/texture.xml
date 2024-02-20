@@ -1,0 +1,45 @@
+<mujocoinclude>
+    <compiler angle="radian" meshdir='../../../../../resources/meshes/' texturedir='../../../../../resources/textures/' />
+   <option apirate="200" iterations="20" noslip_iterations="20"/>
+   <size njmax="500" nconmax="100" nstack="600000" nuser_body="9" nuser_jnt="1" nuser_site="1" nuser_tendon="1" nuser_actuator="16" nuser_sensor="1" />
+   <visual>
+       <global offwidth="3024" offheight="1680" />
+       <quality shadowsize="4096" offsamples="8" />
+       <map force="0.1" fogend="5" />
+       <scale forcewidth='0.1' contactwidth='0.06' contactheight='0.01' jointwidth='0.17' jointlength='2.50' framewidth='0.1' framelength='1.0'/>
+   </visual>
+
+   <asset>
+    <texture type="cube" name="texgeom" builtin="flat" mark="cross" rgb1="0.3 0.6 0.5" rgb2="0.3 0.6 0.5" width="127" height="762" />
+    <texture type="cube" name="wood" file="wood.png" />
+    <texture type="2d" name="wood2d" file="wood.png" />
+    <texture type="cube" name="square" file="square.png" />
+    <texture type="cube" name="foil" file="silverRaw.png" />
+    <texture type="cube" name="woodb" file="woodb.png" />
+    <texture type="2d" name="groundplane" builtin="checker" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" width="100" height="100" />
+    <texture type="2d" name="marble2d" file="marble.png" />
+    <texture type="cube" name="marblecube" file="marble.png" />
+    <material name="MatColl" specular="1" shininess="0.3" reflectance="0.5" rgba="0.4 0.5 0.6 1" />
+    <material name="MatViz" specular="0.75" shininess="0.1" reflectance="0.5" rgba="0.9 0.7 0.5 1" />
+<!--        commented out lines can render transparent geoms to separate out hand, obj, etc-->
+<!--        <material name="MatViz" specular="0.75" shininess="0.1" reflectance="0.5" rgba="0.9 0.7 0.5 0" />-->
+    <material name="MatGnd" specular="0.3" shininess="0.3" reflectance="0.3" rgba="0.5 0.55 0.5 1" />
+    <material name="object" texture="texgeom" />
+    <material name="groundplane" texture="groundplane" texrepeat="10 10" />
+<!--        <material name="groundplane" rgba="0.8 0.8 0.8 0" />-->
+    <material name="table2d" texture="marble2d" reflectance="0.3" rgba="0.8 0.8 0.8 1" />
+    <material name="tablecube" texture="marblecube" rgba="0.8 0.8 0.8 1" />
+    <material name="table_ycb" rgba="0.8 0.8 0.8 1" />
+<!--        <material name="table_ycb" rgba="0.8 0.8 0.8 0" />-->
+    <material name="MatFoil" texture="foil" specular="1" shininess="0.3" rgba="0.9 0.9 0.9 1" />
+    <material name="MatPlane" specular="0.3" shininess="0.3" rgba="0.3 0.3 0.2 1" />
+    <material name="MatWood" texture="wood" texrepeat="3 3" specular="0.4" shininess="0.1" />
+    <material name="MatSquare" texture="square" specular="1" shininess="0.6" rgba="0.8 0.8 0.8 1" />
+    <material name="MatWoodR" texture="wood" specular="1" shininess="0.3" rgba="1 0.5 0.5 1" />
+    <material name="MatWoodG" texture="wood" specular="1" shininess="0.3" rgba="0.2 1 0.2 1" />
+    <material name="MatWoodB" texture="woodb" specular="1" shininess="0.3" />
+
+</asset>
+
+
+</mujocoinclude>

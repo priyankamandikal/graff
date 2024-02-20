@@ -1,5 +1,5 @@
 <mujocoinclude>
-	<mesh file="contactdb/vhacd/door_knob/0.stl" name="0" scale="1.40 1.40 1.40"/>
-	<mesh file="contactdb/vhacd/door_knob/1.stl" name="1" scale="1.40 1.40 1.40"/>
-	<mesh file="contactdb/vhacd/door_knob/2.stl" name="2" scale="1.40 1.40 1.40"/>
+	<mesh file="contactdb/vhacd/door_knob/0.stl" name="0" scale="1.6 1.6 1.6"/>
+	<mesh file="contactdb/vhacd/door_knob/1.stl" name="1" scale="1.6 1.6 1.6"/>
+	<mesh file="contactdb/vhacd/door_knob/2.stl" name="2" scale="1.6 1.6 1.6"/>
 </mujocoinclude>
