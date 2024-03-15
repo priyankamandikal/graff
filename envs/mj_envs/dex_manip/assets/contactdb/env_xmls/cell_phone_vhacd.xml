@@ -48,7 +48,7 @@
 
         <!-- ======= OBJECT ======= -->
         <body name="Object" pos="-0.00 0.0 0.0" user="1001 0 2003 27 0 0 0.06 0 0">
-            <inertial pos="0 0 0" mass="0.2" diaginertia="8.80012e-05 8.80012e-05 8.80012e-05" />
+            <inertial pos="0 0 0.01" mass="0.2" diaginertia="8.80012e-05 8.80012e-05 8.80012e-05" />
             <joint name="obj_Tx3" pos="0 0 0" axis="1 0 0" type="slide" limited="false" damping="0" />
             <joint name="obj_Ty3" pos="0 0 0" axis="0 1 0" type="slide" limited="false" damping="0" />
             <joint name="obj_Tz3" pos="0 0 0" axis="0 0 1" type="slide" limited="false" damping="0" />

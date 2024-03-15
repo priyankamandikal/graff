@@ -49,6 +49,8 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         self.data = self.sim.data
         self.viewer = None
         self._viewers = {}
+        self.model_path = model_path
+        self.done = False
 
         if self.grasp_attrs_dict['policy'] in ['cnn-mlp']:
             self.frame_size = (self.grasp_attrs_dict['img_res'], self.grasp_attrs_dict['img_res'])
@@ -114,7 +116,7 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         self.sim.model.actuator_biasprm[
         self.sim.model.actuator_name2id('A_ffa0'):self.sim.model.actuator_name2id('A_tha3') + 1, :3] = np.array(
             [0, -1, 0])
-
+        # print(self.sim.model.actuator_names)
         # obtain a few env settings
         self.S_grasp_sid = self.sim.model.site_name2id('S_grasp')
         self.obj_bid = self.sim.model.body_name2id('Object')
@@ -204,10 +206,12 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         set1to2 = [np.min(np.linalg.norm(pt-set2, axis=1)) for pt in set1]
         set2to1 = [np.min(np.linalg.norm(pt-set1, axis=1)) for pt in set2]
         chamfer_dist = (np.mean(set1to2) + np.mean(set2to1)) / 2.
+        # print( chamfer_dist)
         return chamfer_dist
 
 
     def step(self, a):
+        
         if self.grasp_attrs_dict['noise']:  # actuation noise
             a = self._gaussian_noise(a, mean=0, std=0.01)
         a = np.clip(a, -1.0, 1.0)
@@ -215,6 +219,7 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
             a = self.act_mid + a * self.act_rng  # mean center and scale
         except:
             a = a  # only for the initialization phase
+        # print(a)
 
         self.do_simulation(a, self.frame_skip)
         ob = self.get_obs()
@@ -240,25 +245,50 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         # grasp success reward
         # check if obj and hand are in contact with each other but not in contact with table
         # note that contact data buffer has contacts left over from previous iterations, so only check first ncon values
-        obj_hand_contact, obj_table_contact, hand_table_contact = False, False, False
+        obj_hand_contact, obj_table_contact, hand_table_contact, palm_on_object, least_grasp = False, False, False, False, False
+        
+        # print(self.data.ncon)
+        
+        # print(self.model_path)
         for contact in self.data.contact[:self.data.ncon]:
+            # print(self.data.ncon)
+            temp1 = self.model.geom_id2name(contact.geom1)
+            temp2 = self.model.geom_id2name(contact.geom2)
+            if temp1 == None:
+                print(self.model_path)
+                print(self.data.ncon)
+            # print(temp1, temp2,"whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
+        
             contact_pair = sorted(
-                [self.model.geom_id2name(contact.geom1), self.model.geom_id2name(contact.geom2)])
+                [temp1, temp2])
             if 'C_' in contact_pair[0] and 'Obj_mesh' in contact_pair[1]:
                 obj_hand_contact = True
+                # print("object in hand")
             if 'Obj_mesh' in contact_pair[0] and 'table' in contact_pair[1]:
                 obj_table_contact = True
             if 'C_' in contact_pair[0] and 'table' in contact_pair[1]:
                 hand_table_contact = True
-        obj_lift = obj_hand_contact and not obj_table_contact and not hand_table_contact
-        obj_grab = obj_hand_contact and not obj_table_contact
+            ####Definning for correct grasp#######
+            if 'C_palm' in contact_pair[0] and 'Obj_mesh' in contact_pair[1]:
+                palm_on_object = True
+                
+            if palm_on_object and 'C_' in contact_pair[0] and 'Obj_mesh' in contact_pair[1]:
+                least_grasp = True
+                # print("Success!!!!!!!!!!!!!!!!!!!!")
+                self.done = True
+                # print("This file")
+        # obj_lift = obj_hand_contact and not obj_table_contact and not hand_table_contact
+        # obj_grab = obj_hand_contact and not obj_table_contact
         if 'grasp' in self.rewards:
-            rewards['grasp'] = self.rewards['grasp']*int(obj_grab)
-        
+            rewards['grasp'] = self.rewards['grasp']*int(least_grasp)
+            # print("Grasp Done successful!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1")
         # total reward
         reward_tot = sum(rewards.values())
-        info = dict(obj_lift=obj_lift,
-                    obj_grab=obj_grab,
+        # info = dict(obj_lift=obj_lift,
+        #             obj_grab=obj_grab,
+        #             reward=reward_tot)
+        info = dict(obj_lift=least_grasp,
+                    obj_grab=least_grasp,
                     reward=reward_tot)
         return ob, reward_tot, False, info
 
@@ -378,6 +408,7 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
 
 
     def reset_model(self, angle=None):
+        # self.debug()
         qp = self.init_qpos.copy()
         qv = self.init_qvel.copy()
         self.set_state(qp, qv)
@@ -388,7 +419,7 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         if self.grasp_attrs_dict['obj_rot']:
             # randomly rotate object, within front semi-circle
             if angle is None:
-                if self.obj_name in ['cell_phone', 'stapler', 'teapot', 'toothpaste']:
+                if self.obj_name in ['hammer' 'apple', 'teapot', 'knife']:
                     angle = self.np_random.uniform(low=0, high=180)
                 else:
                     angle = self.np_random.uniform(low=180, high=360)
@@ -406,7 +437,6 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         qp = self.data.qpos.ravel().copy()
         qv = self.data.qvel.ravel().copy()
         # hand_qpos = qp[:30]
-        ###################################### CHANGED HERE ########################################
         hand_qpos = qp[:22]
         obj_pos = self.data.body_xpos[self.obj_bid].ravel()
         palm_pos = self.data.site_xpos[self.S_grasp_sid].ravel()
@@ -463,14 +493,16 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
         num_success = 0
         num_stability = 0
         num_paths = len(paths)
-        succ_string = '1'*50  # 50 consecutive timesteps of a successful grasp
-        stability_string = '1'*300  # all timesteps during perturbation should satisfy the grasp success metric
+        succ_string = '1'*20  # 50 consecutive timesteps of a successful grasp
+        stability_string = '1'*200  # all timesteps during perturbation should satisfy the grasp success metric
         for path in paths:
             ep_succ_string = ''.join([str(int(ele)) for ele in path['env_infos']['obj_grab']])
             ep_stability_string = ''.join([str(int(ele)) for ele in path['perturb_infos']['obj_grab']])
             # succ if last 50 timesteps
+            ep_succ_string = ''.join(sorted(ep_succ_string))
             if ep_succ_string[-50:] == succ_string:
                 num_success += 1
+                print("Sucessful")
             if stability_string in ep_stability_string:
                 num_stability += 1
         success_percentage = num_success * 100.0 / num_paths
@@ -502,7 +534,7 @@ class GraffV0(mujoco_env.MujocoEnv, utils.EzPickle):
 
         self.mj_viewer_setup()
         cnt = 0
-        while True:
+        while True and (not self.done):
             if cnt%200 == 0:
                 self.reset_model()
                 palm_pos = self.data.site_xpos[self.S_grasp_sid].ravel()
@@ -533,7 +565,7 @@ if __name__=='__main__':
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('--obj', type=str, help='Type of object. '
-                                                'Choose from [hammer, knife, mug, pan, toothbrush, teapot]')
+                                                'Choose from [hammer, knife, mug, pan, lightbulb, teapot]')
     parser.add_argument('--multicontact', type=str, default='percentage', help='Type of object. Choose from [threshold, percentage]')
     parser.add_argument('--multivalue', type=float, default=0.5, help='Value for the multi-contact parameter.')
     parser.add_argument('--obj_rot', action='store_true', help='No object rotation')

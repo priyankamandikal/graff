@@ -13,7 +13,7 @@
 
   <default>
     <default class="D_Touch">
-      <site size="0.004 0.004 0.003" group="4" type="box" rgba="0.8 0.8 0.8 0.5" />
+      <site size="0.004 0.004 0.003" group="4" type="box" rgba="1.8 0.8 0.8 1.0" />
       <general user="0 1 0.03 0.0939711 0.513477 0.0358776 1.23598 8.40409 0.485031 6.04244 1.02187 0.175297 0.121642 0 0 0" />
     </default>
     <default class="allegro_right">
